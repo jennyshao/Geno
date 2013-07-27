@@ -39,7 +39,7 @@ class common:
 	paramFiles_abs_path= rootpath+"/paramfiles"
 	@staticmethod
 	def abs_dir(x):
-		global abs_x
+		nonlocal 	
 		abs_x=rootpath+x
 		print abs_x
 
@@ -68,8 +68,8 @@ class common:
         def threeround(self):
                 for i in NaNs_freq:
                         for j in prop_MAF:
-				self.comb_dir_localname.append(dirname)
 				dirname="NaN_%s_MAF_%s" % (str(i),str(j))
+				self.comb_dir_localname.append(dirname)
 				for k in reps:
 					rep_dir = "rep_%s" % (str(k))   
 					parameters_filename="parameters_%s_%s_%03d.R" % (str(i),str(j),k)
